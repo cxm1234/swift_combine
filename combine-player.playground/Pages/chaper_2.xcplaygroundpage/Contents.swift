@@ -244,4 +244,28 @@ var subscriptions = Set<AnyCancellable>()
 //    subject.send(5)
 //    subject.send(6)
 //}
+
+//example(of: "Type erasure") {
+//    let subject = PassthroughSubject<Int, Never>()
+//    let publisher = subject.eraseToAnyPublisher()
+//    publisher
+//        .sink(receiveValue: { print($0) })
+//        .store(in: &subscriptions)
+//    subject.send(0)
+//}
+
+example(of: "async/await") {
+    let subject = CurrentValueSubject<Int, Never>(0)
+    Task {
+        for await element in subject.values {
+            print("Element: \(element)")
+        }
+        print("Completed.")
+    }
+    subject.send(1)
+    subject.send(2)
+    subject.send(3)
+    subject.send(completion: .finished)
+}
+
 //: [Next](@next)
