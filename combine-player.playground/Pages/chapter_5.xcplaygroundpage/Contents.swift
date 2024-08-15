@@ -125,35 +125,99 @@ var subscriptions = Set<AnyCancellable>()
 //    publisher3.send(completion: .finished)
 //    publishers.send(completion: .finished)
 //}
+//
+//example(of: "switchToLatest - Network Request") {
+//    let url = URL(string: "https://source.unsplash.com")!
+//    func getImage() -> AnyPublisher<UIImage?, Never> {
+//        URLSession.shared
+//            .dataTaskPublisher(for: url)
+//            .map{ data, _ in UIImage(data: data)}
+//            .print("image")
+//            .replaceError(with: nil)
+//            .eraseToAnyPublisher()
+//    }
+//    
+//    let taps = PassthroughSubject<Void, Never>()
+//    
+//    taps
+//        .map { _ in getImage() }
+//        .switchToLatest()
+//        .sink(receiveValue: { _ in } )
+//        .store(in: &subscriptions)
+//    
+//    taps.send()
+//    
+//    DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+//        taps.send()
+//    }
+//    
+//    DispatchQueue.main.asyncAfter(deadline: .now() + 3.1) {
+//        taps.send()
+//    }
+//}
 
-example(of: "switchToLatest - Network Request") {
-    let url = URL(string: "https://source.unsplash.com")!
-    func getImage() -> AnyPublisher<UIImage?, Never> {
-        URLSession.shared
-            .dataTaskPublisher(for: url)
-            .map{ data, _ in UIImage(data: data)}
-            .print("image")
-            .replaceError(with: nil)
-            .eraseToAnyPublisher()
-    }
+//example(of: "merge(with:)") {
+//    let publisher1 = PassthroughSubject<Int, Never>()
+//    let publisher2 = PassthroughSubject<Int, Never>()
+//    
+//    publisher1.merge(with: publisher2)
+//        .sink(receiveCompletion: { _ in print("Completed")}, receiveValue: {print($0)})
+//        .store(in: &subscriptions)
+//    
+//    publisher1.send(1)
+//    publisher1.send(2)
+//    
+//    publisher2.send(3)
+//    
+//    publisher1.send(4)
+//    
+//    publisher2.send(5)
+//    
+//    publisher1.send(completion: .finished)
+//    publisher2.send(completion: .finished)
+//}
+
+//example(of: "combineLatest") {
+//    let publisher1 = PassthroughSubject<Int, Never>()
+//    let publisher2 = PassthroughSubject<String, Never>()
+//    
+//    publisher1
+//        .combineLatest(publisher2)
+//        .sink(receiveCompletion: {_ in print("Completed")}, receiveValue: { print("P1: \($0), P2: \($1)")})
+//        .store(in: &subscriptions)
+//    
+//    publisher1.send(1)
+//    publisher1.send(2)
+//    
+//    publisher2.send("a")
+//    publisher2.send("b")
+//    
+//    publisher1.send(3)
+//    publisher2.send("c")
+//    
+//    publisher1.send(completion: .finished)
+//    publisher2.send(completion: .finished)
+//}
+
+example(of: "zip") {
+    let publisher1 = PassthroughSubject<Int, Never>()
+    let publisher2 = PassthroughSubject<String, Never>()
     
-    let taps = PassthroughSubject<Void, Never>()
-    
-    taps
-        .map { _ in getImage() }
-        .switchToLatest()
-        .sink(receiveValue: { _ in } )
+    publisher1
+        .zip(publisher2)
+        .sink(receiveCompletion: {_ in print("Completed")}, receiveValue: { print("P1: \($0), P2: \($1)")})
         .store(in: &subscriptions)
     
-    taps.send()
+    publisher1.send(1)
+    publisher1.send(2)
+    publisher2.send("a")
+    publisher2.send("b")
+    publisher1.send(3)
+    publisher2.send("c")
+    publisher2.send("d")
     
-    DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
-        taps.send()
-    }
-    
-    DispatchQueue.main.asyncAfter(deadline: .now() + 3.1) {
-        taps.send()
-    }
+    publisher1.send(completion: .finished)
+    publisher2.send(completion: .finished)
 }
 
 //: [Next](@next)
