@@ -19,8 +19,14 @@ extension UIImage {
         UIRectFill(CGRect(origin: .zero, size: size))
         
         for (index, image) in images.enumerated() {
-            
+            image.scaled(tileSize).draw(at: CGPoint(
+                x: CGFloat(index % columns) * tileSize.width,
+                y: CGFloat(index / columns) * tileSize.height
+            ))
         }
+        let image = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        return image ?? UIImage()
     }
     
     func scaled(_ newSize: CGSize) -> UIImage {
