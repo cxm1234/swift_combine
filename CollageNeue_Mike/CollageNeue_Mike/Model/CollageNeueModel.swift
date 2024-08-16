@@ -7,6 +7,7 @@
 
 import UIKit
 import Photos
+import Combine
 
 class CollageNeueModel: ObservableObject {
     static let collageSize = CGSize(width: UIScreen.main.bounds.width, height: 200)
@@ -14,20 +15,56 @@ class CollageNeueModel: ObservableObject {
     private(set) var lastSavedPhotoID = ""
     private(set) var lastErrorMessage = ""
     
+    private var subscriptions = Set<AnyCancellable>()
+    private var images = CurrentValueSubject<[UIImage], Never>([])
+    private(set) var selectedPhotos = PassthroughSubject<UIImage, Never>()
+    
+    let updateUISubject = PassthroughSubject<Int, Never>()
+    @Published var imagePreview: UIImage?
+    
     func bindMainView() {
-        
+        images
+            .handleEvents(receiveOutput: { [weak self] photos in
+                self?.updateUISubject.send(photos.count)
+            })
+            .map { photos in
+                UIImage.collage(images: photos, size: Self.collageSize)
+            }
+            .assign(to: &$imagePreview)
     }
     
     func add() {
-        
+        selectedPhotos = PassthroughSubject<UIImage, Never>()
+        let newPhotos = selectedPhotos
+            .prefix(while: { [unowned self] _ in
+                self.images.value.count < 6
+            })
+            .share()
+        newPhotos
+            .map { [unowned self] newImage in
+                return self.images.value + [newImage]
+            }
+            .assign(to: \.value, on: images)
+            .store(in: &subscriptions)
     }
     
     func clear() {
-        
+        images.send([])
     }
     
     func save() {
+        guard let image = imagePreview else { return }
         
+        PhotoWriter.save(image)
+            .sink { [unowned self] completion in
+                if case .failure(let error) = completion {
+                    lastErrorMessage = error.localizedDescription
+                }
+                clear()
+            } receiveValue: { [unowned self] id in
+                lastSavedPhotoID = id
+            }
+            .store(in: &subscriptions)
     }
     
     private lazy var imageManager = PHCachingImageManager()
@@ -62,6 +99,7 @@ class CollageNeueModel: ObservableObject {
                    isThumbnail {
                     return
                 }
+                self.selectedPhotos.send(image)
             }
         
     }

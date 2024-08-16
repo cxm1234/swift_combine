@@ -11,6 +11,14 @@ import Combine
 
 extension PHPhotoLibrary {
     
+    static var isAuthorized: Future<Bool, Never> {
+        Future { resove in
+            fetchAuthorizationStatus { isAuthorized in
+                resove(.success(isAuthorized))
+            }
+        }
+    }
+    
     static func fetchAuthorizationStatus(callback: @escaping (Bool) -> Void) {
         let currentlyAuthorized = authorizationStatus() == .authorized
         

@@ -55,7 +55,7 @@ struct PhotosView: View {
             Text("You can grant access to Collage Neue from the Settings app")
         })
         .onAppear(perform: {
-            PHPhotoLibrary.fetchAuthorizationStatus { status in
+            _ = PHPhotoLibrary.isAuthorized.sink { status in
                 if status {
                     DispatchQueue.main.async {
                         self.photos = model.loadPhotos()
@@ -65,7 +65,7 @@ struct PhotosView: View {
             model.bindPhotoPicker()
         })
         .onDisappear(perform: {
-            
+            model.selectedPhotos.send(completion: .finished)
         })
         
     }
