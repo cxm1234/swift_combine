@@ -13,7 +13,24 @@ struct ReaderView: View {
     
     var currentDate = Date()
     
+    init(model: ReaderViewModel) {
+        self.model = model
+    }
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        let filter = "Showing all stories"
+        
+        return NavigationView {
+            List {
+                Section(header: Text(filter).padding(.leading, -10)) {
+                    ForEach(self.model.stories) { story in
+                        VStack(alignment: .leading, spacing: 10) {
+                            
+                        }
+                    }
+                }
+            }
+            .listStyle(PlainListStyle())
+        }
     }
 }
