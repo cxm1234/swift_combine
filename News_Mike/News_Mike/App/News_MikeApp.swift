@@ -14,7 +14,10 @@ struct News_MikeApp: App {
     
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ReaderView(model: viewModel)
+                .onAppear(perform: {
+                    viewModel.fetchStories()
+                })
         }
     }
 }
