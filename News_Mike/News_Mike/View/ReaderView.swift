@@ -6,19 +6,26 @@
 //
 
 import SwiftUI
+import Combine
 
 struct ReaderView: View {
-    var model: ReaderViewModel
+    @ObservedObject var model: ReaderViewModel
     @State var presentingSettingsSheet = false
+    @Environment(\.colorScheme) var colorScheme: ColorScheme
+    @EnvironmentObject var settings: Settings
+    private let timer = Timer
+        .publish(every: 10, on: .main, in: .common)
+        .autoconnect()
+        .eraseToAnyPublisher()
     
-    var currentDate = Date()
+    @State var currentDate = Date()
     
     init(model: ReaderViewModel) {
         self.model = model
     }
     
     var body: some View {
-        let filter = "Showing all stories"
+        let filter = settings.keywords.isEmpty ? "Showing all stories" : "Filter: " + settings.keywords.map { $0.value }.joined(separator: ", ")
         return NavigationView {
             List {
                 Section(header: Text(filter).padding(.leading, -10)) {
@@ -39,17 +46,28 @@ struct ReaderView: View {
                                 print(story)
                             }
                             .font(.subheadline)
-                            .foregroundColor(.blue)
+                            .foregroundColor(self.colorScheme == .light ? .blue : .orange)
                             .padding(.top, 6)
                         }
                         .padding()
+                    }
+                    .onReceive(timer) {
+                        self.currentDate = $0
                     }
                 }
                 .padding()
             }
             .listStyle(PlainListStyle())
+            .alert(item: self.$model.error) { error in
+                Alert(
+                    title: Text("Network error"),
+                    message: Text(error.localizedDescription),
+                    dismissButton: .cancel()
+                )
+            }
             .sheet(isPresented: $presentingSettingsSheet, content: {
                 SettingsView()
+                    .environmentObject(self.settings)
             })
             .navigationBarTitle(Text("\(self.model.stories.count) Stories"))
             .navigationBarItems(trailing:
