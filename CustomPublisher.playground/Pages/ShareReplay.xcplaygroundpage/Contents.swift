@@ -38,7 +38,14 @@ fileprivate final class ShareReplaySubscription<Output, Failure: Error>: Subscri
         emitAsNeeded()
     }
     
-    
+    func receive(completion: Subscribers.Completion<Failure>) {
+        guard let subscriber = subscriber else {
+            return
+        }
+        self.subscriber = nil
+        self.buffer.removeAll()
+        subscriber.receive(completion: completion)
+    }
     
     private func complete(with completion: Subscribers.Completion<Failure>) {
         guard let subscriber = subscriber else { return }
