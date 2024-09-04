@@ -87,7 +87,100 @@ extension Publishers {
             self.upstream = upstream
             self.capacity = capacity
         }
+        
+        func receive<S: Subscriber>(subscriber: S)
+        where Failure == S.Failure,
+              Output == S.Input {
+                  lock.lock()
+                  defer { lock.unlock() }
+                  
+                  let subscription = ShareReplaySubscription(
+                    subscriber: subscriber,
+                    replay: replay,
+                    capacity: capacity,
+                    completion: completion
+                  )
+                  
+                  subscriptions.append(subscription)
+                  subscriber.receive(subscription: subscription)
+
+                  guard subscriptions.count == 1 else {
+                      return
+                  }
+                  
+                  let sink = AnySubscriber { subscription in
+                      subscription.request(.unlimited)
+                  } receiveValue: { [weak self] (value: Output) -> Subscribers.Demand in
+                      self?.relay(value)
+                      return .none
+                  } receiveCompletion: { [weak self] in
+                      self?.complete($0)
+                  }
+                  
+                  upstream.subscribe(sink)
+              }
+        
+        private func relay(_ value: Output) {
+            lock.lock()
+            defer {
+                lock.unlock()
+            }
+            guard completion == nil else {
+                return
+            }
+            replay.append(value)
+            if replay.count > capacity {
+                replay.removeFirst()
+            }
+            subscriptions.forEach {
+                $0.receive(value)
+            }
+        }
+        
+        private func complete(_ completion: Subscribers.Completion<Failure>) {
+            lock.lock()
+            defer { lock.unlock() }
+            self.completion = completion
+            subscriptions.forEach {
+                $0.receive(completion: completion)
+            }
+        }
     }
 }
+
+extension Publisher {
+    func shareReplay(capacity: Int = .max) -> Publishers.ShareReplay<Self> {
+        return Publishers.ShareReplay(upstream: self, capacity: capacity)
+    }
+}
+
+var logger = TimeLogger(sinceOrigin: true)
+let subject = PassthroughSubject<Int, Never>()
+
+let publisher = subject.shareReplay(capacity: 2)
+
+subject.send(0)
+
+let subscription1 = publisher.sink {
+    print("subscription1 completed: \($0)", to: &logger)
+} receiveValue: {
+    print("subscription1 received \($0)", to: &logger)
+}
+
+subject.send(1)
+subject.send(2)
+subject.send(3)
+
+let subscription2 = publisher.sink {
+    print("subscription2 completed: \($0)", to: &logger)
+} receiveValue: {
+    print("subscription2 received \($0)", to: &logger)
+}
+
+subject.send(4)
+subject.send(5)
+subject.send(completion: .finished)
+
+
 
 //: [Next](@next)
