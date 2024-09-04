@@ -71,4 +71,23 @@ fileprivate final class ShareReplaySubscription<Output, Failure: Error>: Subscri
     
 }
 
+extension Publishers {
+    final class ShareReplay<Upstream: Publisher>: Publisher {
+        typealias Output = Upstream.Output
+        typealias Failure = Upstream.Failure
+        
+        private let lock = NSRecursiveLock()
+        private let upstream: Upstream
+        private let capacity: Int
+        private var replay = [Output]()
+        private var subscriptions = [ShareReplaySubscription<Output, Failure>]()
+        private var completion: Subscribers.Completion<Failure>? = nil
+        
+        init(upstream: Upstream, capacity: Int) {
+            self.upstream = upstream
+            self.capacity = capacity
+        }
+    }
+}
+
 //: [Next](@next)
