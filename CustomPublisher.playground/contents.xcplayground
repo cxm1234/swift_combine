@@ -4,5 +4,6 @@
         <page name='Unwrap operator'/>
         <page name='DispatchTimer_publisher'/>
         <page name='ShareReplay'/>
+        <page name='PausableSink'/>
     </pages>
 </playground>
