@@ -11,7 +11,7 @@ import SwiftUI
 struct ColorCalc_MikeApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            CalculatorView()
         }
     }
 }
