@@ -18,9 +18,13 @@ struct CalculatorView: View {
                 DisplayView(viewModel: viewModel, type: .rgb, width: bounds.width / 2)
                 DisplayView(viewModel: viewModel, type: .name, width: bounds.width / 2)
             }
-            
-            
+            ButtonRows(viewModel: viewModel)
+            Spacer()
         }
+        .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity)
+        .background(viewModel.color)
+        .animation(.easeInOut)
+        .edgesIgnoringSafeArea(.all)
     }
 }
 
