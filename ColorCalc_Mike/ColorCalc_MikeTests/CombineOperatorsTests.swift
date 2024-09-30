@@ -35,6 +35,31 @@ class CombineOperatorsTests: XCTestCase {
         let intSubject2 = PassthroughSubject<Int, Never>()
         let intSubject3 = PassthroughSubject<Int, Never>()
         
-//        let publisher
+        let publisher = CurrentValueSubject<PassthroughSubject<Int, Never>, Never>(intSubject1)
+        
+        let expected = [1, 2, 4]
+        var results = [Int]()
+        
+        publisher
+            .flatMap(maxPublishers: .max(2)) {
+                $0
+            }
+            .sink {
+                results.append($0)
+            }
+            .store(in: &subscriptions)
+        
+        intSubject1.send(1)
+        publisher.send(intSubject2)
+        intSubject1.send(2)
+        
+        publisher.send(intSubject3)
+        intSubject3.send(3)
+        intSubject2.send(4)
+        
+        publisher.send(completion: .finished)
+        
+        XCTAssert(results == expected, "Results expected to be \(expected) but were \(results)")
+        
     }
 }
