@@ -6,12 +6,16 @@
 //
 
 import SwiftUI
+import ChuckNorrisJokesModel
 
 struct JokeCardView: View {
+    
+    @ObservedObject var viewModel: JokesViewModel
+    
     var body: some View {
         ZStack {
             VStack(alignment: .leading, spacing: 20) {
-                Text(Joke.starter.value)
+                Text(viewModel.joke.value)
                     .font(.largeTitle)
                     .foregroundColor(.primary)
                     .minimumScaleFactor(0.2)
@@ -34,5 +38,6 @@ struct JokeCardView: View {
 }
 
 #Preview {
-    JokeCardView()
+    JokeCardView(viewModel: JokesViewModel())
+        .previewLayout(.sizeThatFits)
 }

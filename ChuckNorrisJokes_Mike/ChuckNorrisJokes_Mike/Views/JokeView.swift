@@ -6,13 +6,18 @@
 //
 
 import SwiftUI
+import ChuckNorrisJokesModel
 
 struct JokeView: View {
+    
+    @Environment(\.managedObjectContext) private var viewContext
+    @ObservedObject private var viewModel = JokesViewModel()
     
     @State private var showJokeView = false
     @State private var showFetchingJoke = false
     @State private var cardTranslation: CGSize = .zero
     @State private var hudOpacity = 0.5
+    @State private var presentSavedJokes = false
     
     private var bounds: CGRect { UIScreen.main.bounds }
     private var translation: Double { Double(cardTranslation.width / bounds.width)}
@@ -24,10 +29,15 @@ struct JokeView: View {
                     Spacer()
                     
                     LargeInlineButton(title: "Show Saved ") {
+                        self.presentSavedJokes = true
                     }
                     .padding(20)
                 }
                 .navigationBarTitle("Chuck Norris Jokes")
+            }
+            .sheet(isPresented: $presentSavedJokes) {
+                SavedJokesView()
+                    .environment(\.managedObjectContext, self.viewContext)
             }
             
             HStack {
@@ -48,11 +58,11 @@ struct JokeView: View {
                 .offset(y: showJokeView ? 0.0 : -bounds.height)
             
             HUDView(imageType: .thumbDown)
-                .opacity(0)
+                .opacity(viewModel.decisionState == .disliked ? hudOpacity : 0)
                 .animation(.easeInOut)
             
             HUDView(imageType: .rofl)
-                .opacity(0)
+                .opacity(viewModel.decisionState == .liked ? hudOpacity : 0)
                 .animation(.easeInOut)
             
         }
@@ -62,7 +72,7 @@ struct JokeView: View {
     }
     
     private var jokeCardView: some View {
-        JokeCardView()
+        JokeCardView(viewModel: viewModel)
             .background(Color.white)
             .cornerRadius(20)
             .shadow(radius: 10)
@@ -87,15 +97,34 @@ struct JokeView: View {
     }
     
     private func updateDecisionStateForChange(_ change: DragGesture.Value) {
-        
+        viewModel.updateDecisionStateForTranslation(translation, andPredictedEndLocationX: change.predictedEndLocation.x, inBounds: bounds)
     }
     
     private func updateBackgroundColor() {
-        
+        viewModel.updateBackgroundColorForTranslation(translation)
     }
     
     private func handle(_ change: DragGesture.Value) {
-        cardTranslation = .zero
+        let decisionState = viewModel.decisionState
+        
+        switch decisionState {
+        case .undecided:
+            cardTranslation = .zero
+            self.viewModel.reset()
+        default:
+            if decisionState == .liked {
+                JokeManagedObject.save(
+                    joke: viewModel.joke,
+                    inViewContext: viewContext
+                )
+            }
+            let translation = change.translation
+            let offset = (decisionState == .liked ? 2 : -2) * bounds.width
+            cardTranslation = CGSize(width: translation.width + offset, height: translation.height)
+            showJokeView = false 
+            reset()
+        }
+        
     }
     
     private func reset() {
@@ -103,6 +132,8 @@ struct JokeView: View {
             self.showFetchingJoke = true
             self.hudOpacity = 0.5
             self.cardTranslation = .zero
+            self.viewModel.reset()
+            self.viewModel.fetchJoke()
             
             DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
                 self.showFetchingJoke = false

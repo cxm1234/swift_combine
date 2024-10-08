@@ -10,17 +10,27 @@
 		9098EC742CB4DF5B00F6B3FC /* ChuckNorrisJokes_MikeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9098EC732CB4DF5B00F6B3FC /* ChuckNorrisJokes_MikeApp.swift */; };
 		9098EC782CB4DF5C00F6B3FC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9098EC772CB4DF5C00F6B3FC /* Assets.xcassets */; };
 		9098EC7B2CB4DF5C00F6B3FC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9098EC7A2CB4DF5C00F6B3FC /* Preview Assets.xcassets */; };
-		9098EC802CB4DF5C00F6B3FC /* ChuckNorrisJokes_Mike.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9098EC7E2CB4DF5C00F6B3FC /* ChuckNorrisJokes_Mike.xcdatamodeld */; };
+		9098EC802CB4DF5C00F6B3FC /* ChuckNorrisJokes.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9098EC7E2CB4DF5C00F6B3FC /* ChuckNorrisJokes.xcdatamodeld */; };
 		9098EC8A2CB4DF5C00F6B3FC /* ChuckNorrisJokes_MikeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9098EC892CB4DF5C00F6B3FC /* ChuckNorrisJokes_MikeTests.swift */; };
-		9098EC942CB4DF5C00F6B3FC /* ChuckNorrisJokes_MikeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9098EC932CB4DF5C00F6B3FC /* ChuckNorrisJokes_MikeUITests.swift */; };
-		9098EC962CB4DF5C00F6B3FC /* ChuckNorrisJokes_MikeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9098EC952CB4DF5C00F6B3FC /* ChuckNorrisJokes_MikeUITestsLaunchTests.swift */; };
 		9098ECA42CB4E04C00F6B3FC /* JokeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9098ECA32CB4E04C00F6B3FC /* JokeView.swift */; };
 		9098ECA72CB4E1DA00F6B3FC /* LargeInlineButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9098ECA62CB4E1DA00F6B3FC /* LargeInlineButton.swift */; };
 		9098ECA92CB4E8D200F6B3FC /* JokeCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9098ECA82CB4E8D200F6B3FC /* JokeCardView.swift */; };
-		9098ECAD2CB500BD00F6B3FC /* Joke.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9098ECAC2CB500BD00F6B3FC /* Joke.swift */; };
 		9098ECB02CB503BE00F6B3FC /* SampleJoke.json in Resources */ = {isa = PBXBuildFile; fileRef = 9098ECAF2CB503BE00F6B3FC /* SampleJoke.json */; };
 		9098ECB22CB50C6C00F6B3FC /* HUDView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9098ECB12CB50C6C00F6B3FC /* HUDView.swift */; };
 		9098ECB42CB50CE300F6B3FC /* ChuckNorrisJokesStyleKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9098ECB32CB50CE300F6B3FC /* ChuckNorrisJokesStyleKit.swift */; };
+		9098ECC42CB50F7C00F6B3FC /* ChuckNorrisJokesModel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9098ECBA2CB50F7C00F6B3FC /* ChuckNorrisJokesModel.framework */; };
+		9098ECCB2CB50F7C00F6B3FC /* ChuckNorrisJokesModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9098ECCA2CB50F7C00F6B3FC /* ChuckNorrisJokesModelTests.swift */; };
+		9098ECCF2CB50F7C00F6B3FC /* ChuckNorrisJokesModel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9098ECBA2CB50F7C00F6B3FC /* ChuckNorrisJokesModel.framework */; };
+		9098ECD02CB50F7C00F6B3FC /* ChuckNorrisJokesModel.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9098ECBA2CB50F7C00F6B3FC /* ChuckNorrisJokesModel.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		9098ECD92CB5100C00F6B3FC /* Joke.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9098ECAC2CB500BD00F6B3FC /* Joke.swift */; };
+		9098ECDD2CB5126200F6B3FC /* JokesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9098ECDC2CB5126200F6B3FC /* JokesViewModel.swift */; };
+		9098ECE02CB513BF00F6B3FC /* JokesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9098ECDF2CB513BF00F6B3FC /* JokesService.swift */; };
+		9098ECE32CB5145500F6B3FC /* URLComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9098ECE22CB5145500F6B3FC /* URLComponents.swift */; };
+		9098ECE62CB5154D00F6B3FC /* JokeServiceDataPublisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9098ECE52CB5154D00F6B3FC /* JokeServiceDataPublisher.swift */; };
+		9098ECE92CB5195400F6B3FC /* JokesViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9098ECE82CB5195400F6B3FC /* JokesViewModelTests.swift */; };
+		9098ECEC2CB51BAE00F6B3FC /* MockJokesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9098ECEB2CB51BAE00F6B3FC /* MockJokesService.swift */; };
+		9098ECEE2CB5284600F6B3FC /* JokeManagedObject+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9098ECED2CB5284600F6B3FC /* JokeManagedObject+.swift */; };
+		9098ECF02CB52FEE00F6B3FC /* SavedJokesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9098ECEF2CB52FEE00F6B3FC /* SavedJokesView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,14 +41,42 @@
 			remoteGlobalIDString = 9098EC6F2CB4DF5B00F6B3FC;
 			remoteInfo = ChuckNorrisJokes_Mike;
 		};
-		9098EC902CB4DF5C00F6B3FC /* PBXContainerItemProxy */ = {
+		9098ECC52CB50F7C00F6B3FC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9098EC682CB4DF5B00F6B3FC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9098ECB92CB50F7C00F6B3FC;
+			remoteInfo = ChuckNorrisJokesModel;
+		};
+		9098ECC72CB50F7C00F6B3FC /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 9098EC682CB4DF5B00F6B3FC /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 9098EC6F2CB4DF5B00F6B3FC;
 			remoteInfo = ChuckNorrisJokes_Mike;
 		};
+		9098ECCD2CB50F7C00F6B3FC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9098EC682CB4DF5B00F6B3FC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9098ECB92CB50F7C00F6B3FC;
+			remoteInfo = ChuckNorrisJokesModel;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		9098ECD42CB50F7C00F6B3FC /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				9098ECD02CB50F7C00F6B3FC /* ChuckNorrisJokesModel.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		9098EC702CB4DF5B00F6B3FC /* ChuckNorrisJokes_Mike.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChuckNorrisJokes_Mike.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -48,9 +86,6 @@
 		9098EC7F2CB4DF5C00F6B3FC /* ChuckNorrisJokes_Mike.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ChuckNorrisJokes_Mike.xcdatamodel; sourceTree = "<group>"; };
 		9098EC852CB4DF5C00F6B3FC /* ChuckNorrisJokes_MikeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChuckNorrisJokes_MikeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9098EC892CB4DF5C00F6B3FC /* ChuckNorrisJokes_MikeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChuckNorrisJokes_MikeTests.swift; sourceTree = "<group>"; };
-		9098EC8F2CB4DF5C00F6B3FC /* ChuckNorrisJokes_MikeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChuckNorrisJokes_MikeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		9098EC932CB4DF5C00F6B3FC /* ChuckNorrisJokes_MikeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChuckNorrisJokes_MikeUITests.swift; sourceTree = "<group>"; };
-		9098EC952CB4DF5C00F6B3FC /* ChuckNorrisJokes_MikeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChuckNorrisJokes_MikeUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		9098ECA32CB4E04C00F6B3FC /* JokeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokeView.swift; sourceTree = "<group>"; };
 		9098ECA62CB4E1DA00F6B3FC /* LargeInlineButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LargeInlineButton.swift; sourceTree = "<group>"; };
 		9098ECA82CB4E8D200F6B3FC /* JokeCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokeCardView.swift; sourceTree = "<group>"; };
@@ -58,6 +93,17 @@
 		9098ECAF2CB503BE00F6B3FC /* SampleJoke.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = SampleJoke.json; sourceTree = "<group>"; };
 		9098ECB12CB50C6C00F6B3FC /* HUDView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HUDView.swift; sourceTree = "<group>"; };
 		9098ECB32CB50CE300F6B3FC /* ChuckNorrisJokesStyleKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChuckNorrisJokesStyleKit.swift; sourceTree = "<group>"; };
+		9098ECBA2CB50F7C00F6B3FC /* ChuckNorrisJokesModel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ChuckNorrisJokesModel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9098ECC32CB50F7C00F6B3FC /* ChuckNorrisJokesModelTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChuckNorrisJokesModelTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9098ECCA2CB50F7C00F6B3FC /* ChuckNorrisJokesModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChuckNorrisJokesModelTests.swift; sourceTree = "<group>"; };
+		9098ECDC2CB5126200F6B3FC /* JokesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokesViewModel.swift; sourceTree = "<group>"; };
+		9098ECDF2CB513BF00F6B3FC /* JokesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokesService.swift; sourceTree = "<group>"; };
+		9098ECE22CB5145500F6B3FC /* URLComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLComponents.swift; sourceTree = "<group>"; };
+		9098ECE52CB5154D00F6B3FC /* JokeServiceDataPublisher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokeServiceDataPublisher.swift; sourceTree = "<group>"; };
+		9098ECE82CB5195400F6B3FC /* JokesViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokesViewModelTests.swift; sourceTree = "<group>"; };
+		9098ECEB2CB51BAE00F6B3FC /* MockJokesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockJokesService.swift; sourceTree = "<group>"; };
+		9098ECED2CB5284600F6B3FC /* JokeManagedObject+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JokeManagedObject+.swift"; sourceTree = "<group>"; };
+		9098ECEF2CB52FEE00F6B3FC /* SavedJokesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedJokesView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +111,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9098ECCF2CB50F7C00F6B3FC /* ChuckNorrisJokesModel.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -75,10 +122,18 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		9098EC8C2CB4DF5C00F6B3FC /* Frameworks */ = {
+		9098ECB72CB50F7C00F6B3FC /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9098ECC02CB50F7C00F6B3FC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9098ECC42CB50F7C00F6B3FC /* ChuckNorrisJokesModel.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -88,10 +143,10 @@
 		9098EC672CB4DF5B00F6B3FC = {
 			isa = PBXGroup;
 			children = (
-				9098ECAA2CB4E9BB00F6B3FC /* ChuckNorrisJokesModel */,
+				9098ECBB2CB50F7C00F6B3FC /* ChuckNorrisJokesModel */,
 				9098EC722CB4DF5B00F6B3FC /* ChuckNorrisJokes_Mike */,
 				9098EC882CB4DF5C00F6B3FC /* ChuckNorrisJokes_MikeTests */,
-				9098EC922CB4DF5C00F6B3FC /* ChuckNorrisJokes_MikeUITests */,
+				9098ECC92CB50F7C00F6B3FC /* ChuckNorrisJokesModelTests */,
 				9098EC712CB4DF5B00F6B3FC /* Products */,
 			);
 			sourceTree = "<group>";
@@ -101,7 +156,8 @@
 			children = (
 				9098EC702CB4DF5B00F6B3FC /* ChuckNorrisJokes_Mike.app */,
 				9098EC852CB4DF5C00F6B3FC /* ChuckNorrisJokes_MikeTests.xctest */,
-				9098EC8F2CB4DF5C00F6B3FC /* ChuckNorrisJokes_MikeUITests.xctest */,
+				9098ECBA2CB50F7C00F6B3FC /* ChuckNorrisJokesModel.framework */,
+				9098ECC32CB50F7C00F6B3FC /* ChuckNorrisJokesModelTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -128,18 +184,11 @@
 		9098EC882CB4DF5C00F6B3FC /* ChuckNorrisJokes_MikeTests */ = {
 			isa = PBXGroup;
 			children = (
+				9098ECEA2CB51B9300F6B3FC /* Services */,
+				9098ECE72CB5192600F6B3FC /* Tests */,
 				9098EC892CB4DF5C00F6B3FC /* ChuckNorrisJokes_MikeTests.swift */,
 			);
 			path = ChuckNorrisJokes_MikeTests;
-			sourceTree = "<group>";
-		};
-		9098EC922CB4DF5C00F6B3FC /* ChuckNorrisJokes_MikeUITests */ = {
-			isa = PBXGroup;
-			children = (
-				9098EC932CB4DF5C00F6B3FC /* ChuckNorrisJokes_MikeUITests.swift */,
-				9098EC952CB4DF5C00F6B3FC /* ChuckNorrisJokes_MikeUITestsLaunchTests.swift */,
-			);
-			path = ChuckNorrisJokes_MikeUITests;
 			sourceTree = "<group>";
 		};
 		9098ECA22CB4DFCA00F6B3FC /* Views */ = {
@@ -149,6 +198,7 @@
 				9098ECA62CB4E1DA00F6B3FC /* LargeInlineButton.swift */,
 				9098ECA82CB4E8D200F6B3FC /* JokeCardView.swift */,
 				9098ECB12CB50C6C00F6B3FC /* HUDView.swift */,
+				9098ECEF2CB52FEE00F6B3FC /* SavedJokesView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -156,17 +206,10 @@
 		9098ECA52CB4E06000F6B3FC /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				9098EC7E2CB4DF5C00F6B3FC /* ChuckNorrisJokes_Mike.xcdatamodeld */,
+				9098EC7E2CB4DF5C00F6B3FC /* ChuckNorrisJokes.xcdatamodeld */,
+				9098ECED2CB5284600F6B3FC /* JokeManagedObject+.swift */,
 			);
 			name = Models;
-			sourceTree = "<group>";
-		};
-		9098ECAA2CB4E9BB00F6B3FC /* ChuckNorrisJokesModel */ = {
-			isa = PBXGroup;
-			children = (
-				9098ECAB2CB4EA4500F6B3FC /* Models */,
-			);
-			path = ChuckNorrisJokesModel;
 			sourceTree = "<group>";
 		};
 		9098ECAB2CB4EA4500F6B3FC /* Models */ = {
@@ -188,7 +231,85 @@
 			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		9098ECBB2CB50F7C00F6B3FC /* ChuckNorrisJokesModel */ = {
+			isa = PBXGroup;
+			children = (
+				9098ECE42CB5152200F6B3FC /* Protocols */,
+				9098ECE12CB5144100F6B3FC /* Extensions */,
+				9098ECDE2CB512E200F6B3FC /* Services */,
+				9098ECDB2CB5124E00F6B3FC /* View Models */,
+				9098ECAB2CB4EA4500F6B3FC /* Models */,
+			);
+			path = ChuckNorrisJokesModel;
+			sourceTree = "<group>";
+		};
+		9098ECC92CB50F7C00F6B3FC /* ChuckNorrisJokesModelTests */ = {
+			isa = PBXGroup;
+			children = (
+				9098ECCA2CB50F7C00F6B3FC /* ChuckNorrisJokesModelTests.swift */,
+			);
+			path = ChuckNorrisJokesModelTests;
+			sourceTree = "<group>";
+		};
+		9098ECDB2CB5124E00F6B3FC /* View Models */ = {
+			isa = PBXGroup;
+			children = (
+				9098ECDC2CB5126200F6B3FC /* JokesViewModel.swift */,
+			);
+			path = "View Models";
+			sourceTree = "<group>";
+		};
+		9098ECDE2CB512E200F6B3FC /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				9098ECDF2CB513BF00F6B3FC /* JokesService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		9098ECE12CB5144100F6B3FC /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				9098ECE22CB5145500F6B3FC /* URLComponents.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		9098ECE42CB5152200F6B3FC /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				9098ECE52CB5154D00F6B3FC /* JokeServiceDataPublisher.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		9098ECE72CB5192600F6B3FC /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				9098ECE82CB5195400F6B3FC /* JokesViewModelTests.swift */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		9098ECEA2CB51B9300F6B3FC /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				9098ECEB2CB51BAE00F6B3FC /* MockJokesService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		9098ECB52CB50F7C00F6B3FC /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		9098EC6F2CB4DF5B00F6B3FC /* ChuckNorrisJokes_Mike */ = {
@@ -198,10 +319,12 @@
 				9098EC6C2CB4DF5B00F6B3FC /* Sources */,
 				9098EC6D2CB4DF5B00F6B3FC /* Frameworks */,
 				9098EC6E2CB4DF5B00F6B3FC /* Resources */,
+				9098ECD42CB50F7C00F6B3FC /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				9098ECCE2CB50F7C00F6B3FC /* PBXTargetDependency */,
 			);
 			name = ChuckNorrisJokes_Mike;
 			productName = ChuckNorrisJokes_Mike;
@@ -226,23 +349,42 @@
 			productReference = 9098EC852CB4DF5C00F6B3FC /* ChuckNorrisJokes_MikeTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		9098EC8E2CB4DF5C00F6B3FC /* ChuckNorrisJokes_MikeUITests */ = {
+		9098ECB92CB50F7C00F6B3FC /* ChuckNorrisJokesModel */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9098EC9F2CB4DF5C00F6B3FC /* Build configuration list for PBXNativeTarget "ChuckNorrisJokes_MikeUITests" */;
+			buildConfigurationList = 9098ECD12CB50F7C00F6B3FC /* Build configuration list for PBXNativeTarget "ChuckNorrisJokesModel" */;
 			buildPhases = (
-				9098EC8B2CB4DF5C00F6B3FC /* Sources */,
-				9098EC8C2CB4DF5C00F6B3FC /* Frameworks */,
-				9098EC8D2CB4DF5C00F6B3FC /* Resources */,
+				9098ECB52CB50F7C00F6B3FC /* Headers */,
+				9098ECB62CB50F7C00F6B3FC /* Sources */,
+				9098ECB72CB50F7C00F6B3FC /* Frameworks */,
+				9098ECB82CB50F7C00F6B3FC /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				9098EC912CB4DF5C00F6B3FC /* PBXTargetDependency */,
 			);
-			name = ChuckNorrisJokes_MikeUITests;
-			productName = ChuckNorrisJokes_MikeUITests;
-			productReference = 9098EC8F2CB4DF5C00F6B3FC /* ChuckNorrisJokes_MikeUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
+			name = ChuckNorrisJokesModel;
+			productName = ChuckNorrisJokesModel;
+			productReference = 9098ECBA2CB50F7C00F6B3FC /* ChuckNorrisJokesModel.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		9098ECC22CB50F7C00F6B3FC /* ChuckNorrisJokesModelTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9098ECD52CB50F7C00F6B3FC /* Build configuration list for PBXNativeTarget "ChuckNorrisJokesModelTests" */;
+			buildPhases = (
+				9098ECBF2CB50F7C00F6B3FC /* Sources */,
+				9098ECC02CB50F7C00F6B3FC /* Frameworks */,
+				9098ECC12CB50F7C00F6B3FC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9098ECC62CB50F7C00F6B3FC /* PBXTargetDependency */,
+				9098ECC82CB50F7C00F6B3FC /* PBXTargetDependency */,
+			);
+			name = ChuckNorrisJokesModelTests;
+			productName = ChuckNorrisJokesModelTests;
+			productReference = 9098ECC32CB50F7C00F6B3FC /* ChuckNorrisJokesModelTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -261,7 +403,10 @@
 						CreatedOnToolsVersion = 15.4;
 						TestTargetID = 9098EC6F2CB4DF5B00F6B3FC;
 					};
-					9098EC8E2CB4DF5C00F6B3FC = {
+					9098ECB92CB50F7C00F6B3FC = {
+						CreatedOnToolsVersion = 15.4;
+					};
+					9098ECC22CB50F7C00F6B3FC = {
 						CreatedOnToolsVersion = 15.4;
 						TestTargetID = 9098EC6F2CB4DF5B00F6B3FC;
 					};
@@ -282,7 +427,8 @@
 			targets = (
 				9098EC6F2CB4DF5B00F6B3FC /* ChuckNorrisJokes_Mike */,
 				9098EC842CB4DF5C00F6B3FC /* ChuckNorrisJokes_MikeTests */,
-				9098EC8E2CB4DF5C00F6B3FC /* ChuckNorrisJokes_MikeUITests */,
+				9098ECB92CB50F7C00F6B3FC /* ChuckNorrisJokesModel */,
+				9098ECC22CB50F7C00F6B3FC /* ChuckNorrisJokesModelTests */,
 			);
 		};
 /* End PBXProject section */
@@ -305,7 +451,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		9098EC8D2CB4DF5C00F6B3FC /* Resources */ = {
+		9098ECB82CB50F7C00F6B3FC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9098ECC12CB50F7C00F6B3FC /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -320,12 +473,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				9098ECB22CB50C6C00F6B3FC /* HUDView.swift in Sources */,
+				9098ECF02CB52FEE00F6B3FC /* SavedJokesView.swift in Sources */,
 				9098ECB42CB50CE300F6B3FC /* ChuckNorrisJokesStyleKit.swift in Sources */,
 				9098ECA72CB4E1DA00F6B3FC /* LargeInlineButton.swift in Sources */,
+				9098ECEE2CB5284600F6B3FC /* JokeManagedObject+.swift in Sources */,
 				9098ECA92CB4E8D200F6B3FC /* JokeCardView.swift in Sources */,
-				9098ECAD2CB500BD00F6B3FC /* Joke.swift in Sources */,
 				9098ECA42CB4E04C00F6B3FC /* JokeView.swift in Sources */,
-				9098EC802CB4DF5C00F6B3FC /* ChuckNorrisJokes_Mike.xcdatamodeld in Sources */,
+				9098EC802CB4DF5C00F6B3FC /* ChuckNorrisJokes.xcdatamodeld in Sources */,
 				9098EC742CB4DF5B00F6B3FC /* ChuckNorrisJokes_MikeApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -335,15 +489,28 @@
 			buildActionMask = 2147483647;
 			files = (
 				9098EC8A2CB4DF5C00F6B3FC /* ChuckNorrisJokes_MikeTests.swift in Sources */,
+				9098ECE92CB5195400F6B3FC /* JokesViewModelTests.swift in Sources */,
+				9098ECEC2CB51BAE00F6B3FC /* MockJokesService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		9098EC8B2CB4DF5C00F6B3FC /* Sources */ = {
+		9098ECB62CB50F7C00F6B3FC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9098EC942CB4DF5C00F6B3FC /* ChuckNorrisJokes_MikeUITests.swift in Sources */,
-				9098EC962CB4DF5C00F6B3FC /* ChuckNorrisJokes_MikeUITestsLaunchTests.swift in Sources */,
+				9098ECD92CB5100C00F6B3FC /* Joke.swift in Sources */,
+				9098ECDD2CB5126200F6B3FC /* JokesViewModel.swift in Sources */,
+				9098ECE02CB513BF00F6B3FC /* JokesService.swift in Sources */,
+				9098ECE62CB5154D00F6B3FC /* JokeServiceDataPublisher.swift in Sources */,
+				9098ECE32CB5145500F6B3FC /* URLComponents.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9098ECBF2CB50F7C00F6B3FC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9098ECCB2CB50F7C00F6B3FC /* ChuckNorrisJokesModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -355,10 +522,20 @@
 			target = 9098EC6F2CB4DF5B00F6B3FC /* ChuckNorrisJokes_Mike */;
 			targetProxy = 9098EC862CB4DF5C00F6B3FC /* PBXContainerItemProxy */;
 		};
-		9098EC912CB4DF5C00F6B3FC /* PBXTargetDependency */ = {
+		9098ECC62CB50F7C00F6B3FC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9098ECB92CB50F7C00F6B3FC /* ChuckNorrisJokesModel */;
+			targetProxy = 9098ECC52CB50F7C00F6B3FC /* PBXContainerItemProxy */;
+		};
+		9098ECC82CB50F7C00F6B3FC /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 9098EC6F2CB4DF5B00F6B3FC /* ChuckNorrisJokes_Mike */;
-			targetProxy = 9098EC902CB4DF5C00F6B3FC /* PBXContainerItemProxy */;
+			targetProxy = 9098ECC72CB50F7C00F6B3FC /* PBXContainerItemProxy */;
+		};
+		9098ECCE2CB50F7C00F6B3FC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9098ECB92CB50F7C00F6B3FC /* ChuckNorrisJokesModel */;
+			targetProxy = 9098ECCD2CB50F7C00F6B3FC /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -485,6 +662,7 @@
 		9098EC9A2CB4DF5C00F6B3FC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -513,6 +691,7 @@
 		9098EC9B2CB4DF5C00F6B3FC /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -576,24 +755,75 @@
 			};
 			name = Release;
 		};
-		9098ECA02CB4DF5C00F6B3FC /* Debug */ = {
+		9098ECD22CB50F7C00F6B3FC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.cxm.timeout.ChuckNorrisJokes-MikeUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
+				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu17 gnu++20";
+				PRODUCT_BUNDLE_IDENTIFIER = com.cxm.timeout.ChuckNorrisJokesModel;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_INSTALL_OBJC_HEADER = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = ChuckNorrisJokes_Mike;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
 		};
-		9098ECA12CB4DF5C00F6B3FC /* Release */ = {
+		9098ECD32CB50F7C00F6B3FC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu17 gnu++20";
+				PRODUCT_BUNDLE_IDENTIFIER = com.cxm.timeout.ChuckNorrisJokesModel;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_INSTALL_OBJC_HEADER = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		9098ECD62CB50F7C00F6B3FC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
@@ -601,12 +831,29 @@
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.cxm.timeout.ChuckNorrisJokes-MikeUITests";
+				PRODUCT_BUNDLE_IDENTIFIER = com.cxm.timeout.ChuckNorrisJokesModelTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = ChuckNorrisJokes_Mike;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ChuckNorrisJokes_Mike.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/ChuckNorrisJokes_Mike";
+			};
+			name = Debug;
+		};
+		9098ECD72CB50F7C00F6B3FC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.cxm.timeout.ChuckNorrisJokesModelTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ChuckNorrisJokes_Mike.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/ChuckNorrisJokes_Mike";
 			};
 			name = Release;
 		};
@@ -640,11 +887,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		9098EC9F2CB4DF5C00F6B3FC /* Build configuration list for PBXNativeTarget "ChuckNorrisJokes_MikeUITests" */ = {
+		9098ECD12CB50F7C00F6B3FC /* Build configuration list for PBXNativeTarget "ChuckNorrisJokesModel" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				9098ECA02CB4DF5C00F6B3FC /* Debug */,
-				9098ECA12CB4DF5C00F6B3FC /* Release */,
+				9098ECD22CB50F7C00F6B3FC /* Debug */,
+				9098ECD32CB50F7C00F6B3FC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9098ECD52CB50F7C00F6B3FC /* Build configuration list for PBXNativeTarget "ChuckNorrisJokesModelTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9098ECD62CB50F7C00F6B3FC /* Debug */,
+				9098ECD72CB50F7C00F6B3FC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -652,13 +908,13 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		9098EC7E2CB4DF5C00F6B3FC /* ChuckNorrisJokes_Mike.xcdatamodeld */ = {
+		9098EC7E2CB4DF5C00F6B3FC /* ChuckNorrisJokes.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
 				9098EC7F2CB4DF5C00F6B3FC /* ChuckNorrisJokes_Mike.xcdatamodel */,
 			);
 			currentVersion = 9098EC7F2CB4DF5C00F6B3FC /* ChuckNorrisJokes_Mike.xcdatamodel */;
-			path = ChuckNorrisJokes_Mike.xcdatamodeld;
+			path = ChuckNorrisJokes.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
