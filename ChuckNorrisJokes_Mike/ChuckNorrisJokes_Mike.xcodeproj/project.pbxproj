@@ -1,0 +1,668 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9098EC742CB4DF5B00F6B3FC /* ChuckNorrisJokes_MikeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9098EC732CB4DF5B00F6B3FC /* ChuckNorrisJokes_MikeApp.swift */; };
+		9098EC782CB4DF5C00F6B3FC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9098EC772CB4DF5C00F6B3FC /* Assets.xcassets */; };
+		9098EC7B2CB4DF5C00F6B3FC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9098EC7A2CB4DF5C00F6B3FC /* Preview Assets.xcassets */; };
+		9098EC802CB4DF5C00F6B3FC /* ChuckNorrisJokes_Mike.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9098EC7E2CB4DF5C00F6B3FC /* ChuckNorrisJokes_Mike.xcdatamodeld */; };
+		9098EC8A2CB4DF5C00F6B3FC /* ChuckNorrisJokes_MikeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9098EC892CB4DF5C00F6B3FC /* ChuckNorrisJokes_MikeTests.swift */; };
+		9098EC942CB4DF5C00F6B3FC /* ChuckNorrisJokes_MikeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9098EC932CB4DF5C00F6B3FC /* ChuckNorrisJokes_MikeUITests.swift */; };
+		9098EC962CB4DF5C00F6B3FC /* ChuckNorrisJokes_MikeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9098EC952CB4DF5C00F6B3FC /* ChuckNorrisJokes_MikeUITestsLaunchTests.swift */; };
+		9098ECA42CB4E04C00F6B3FC /* JokeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9098ECA32CB4E04C00F6B3FC /* JokeView.swift */; };
+		9098ECA72CB4E1DA00F6B3FC /* LargeInlineButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9098ECA62CB4E1DA00F6B3FC /* LargeInlineButton.swift */; };
+		9098ECA92CB4E8D200F6B3FC /* JokeCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9098ECA82CB4E8D200F6B3FC /* JokeCardView.swift */; };
+		9098ECAD2CB500BD00F6B3FC /* Joke.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9098ECAC2CB500BD00F6B3FC /* Joke.swift */; };
+		9098ECB02CB503BE00F6B3FC /* SampleJoke.json in Resources */ = {isa = PBXBuildFile; fileRef = 9098ECAF2CB503BE00F6B3FC /* SampleJoke.json */; };
+		9098ECB22CB50C6C00F6B3FC /* HUDView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9098ECB12CB50C6C00F6B3FC /* HUDView.swift */; };
+		9098ECB42CB50CE300F6B3FC /* ChuckNorrisJokesStyleKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9098ECB32CB50CE300F6B3FC /* ChuckNorrisJokesStyleKit.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		9098EC862CB4DF5C00F6B3FC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9098EC682CB4DF5B00F6B3FC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9098EC6F2CB4DF5B00F6B3FC;
+			remoteInfo = ChuckNorrisJokes_Mike;
+		};
+		9098EC902CB4DF5C00F6B3FC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9098EC682CB4DF5B00F6B3FC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9098EC6F2CB4DF5B00F6B3FC;
+			remoteInfo = ChuckNorrisJokes_Mike;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		9098EC702CB4DF5B00F6B3FC /* ChuckNorrisJokes_Mike.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChuckNorrisJokes_Mike.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9098EC732CB4DF5B00F6B3FC /* ChuckNorrisJokes_MikeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChuckNorrisJokes_MikeApp.swift; sourceTree = "<group>"; };
+		9098EC772CB4DF5C00F6B3FC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9098EC7A2CB4DF5C00F6B3FC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		9098EC7F2CB4DF5C00F6B3FC /* ChuckNorrisJokes_Mike.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ChuckNorrisJokes_Mike.xcdatamodel; sourceTree = "<group>"; };
+		9098EC852CB4DF5C00F6B3FC /* ChuckNorrisJokes_MikeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChuckNorrisJokes_MikeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9098EC892CB4DF5C00F6B3FC /* ChuckNorrisJokes_MikeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChuckNorrisJokes_MikeTests.swift; sourceTree = "<group>"; };
+		9098EC8F2CB4DF5C00F6B3FC /* ChuckNorrisJokes_MikeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChuckNorrisJokes_MikeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9098EC932CB4DF5C00F6B3FC /* ChuckNorrisJokes_MikeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChuckNorrisJokes_MikeUITests.swift; sourceTree = "<group>"; };
+		9098EC952CB4DF5C00F6B3FC /* ChuckNorrisJokes_MikeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChuckNorrisJokes_MikeUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		9098ECA32CB4E04C00F6B3FC /* JokeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokeView.swift; sourceTree = "<group>"; };
+		9098ECA62CB4E1DA00F6B3FC /* LargeInlineButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LargeInlineButton.swift; sourceTree = "<group>"; };
+		9098ECA82CB4E8D200F6B3FC /* JokeCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokeCardView.swift; sourceTree = "<group>"; };
+		9098ECAC2CB500BD00F6B3FC /* Joke.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Joke.swift; sourceTree = "<group>"; };
+		9098ECAF2CB503BE00F6B3FC /* SampleJoke.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = SampleJoke.json; sourceTree = "<group>"; };
+		9098ECB12CB50C6C00F6B3FC /* HUDView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HUDView.swift; sourceTree = "<group>"; };
+		9098ECB32CB50CE300F6B3FC /* ChuckNorrisJokesStyleKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChuckNorrisJokesStyleKit.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9098EC6D2CB4DF5B00F6B3FC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9098EC822CB4DF5C00F6B3FC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9098EC8C2CB4DF5C00F6B3FC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		9098EC672CB4DF5B00F6B3FC = {
+			isa = PBXGroup;
+			children = (
+				9098ECAA2CB4E9BB00F6B3FC /* ChuckNorrisJokesModel */,
+				9098EC722CB4DF5B00F6B3FC /* ChuckNorrisJokes_Mike */,
+				9098EC882CB4DF5C00F6B3FC /* ChuckNorrisJokes_MikeTests */,
+				9098EC922CB4DF5C00F6B3FC /* ChuckNorrisJokes_MikeUITests */,
+				9098EC712CB4DF5B00F6B3FC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		9098EC712CB4DF5B00F6B3FC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9098EC702CB4DF5B00F6B3FC /* ChuckNorrisJokes_Mike.app */,
+				9098EC852CB4DF5C00F6B3FC /* ChuckNorrisJokes_MikeTests.xctest */,
+				9098EC8F2CB4DF5C00F6B3FC /* ChuckNorrisJokes_MikeUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9098EC722CB4DF5B00F6B3FC /* ChuckNorrisJokes_Mike */ = {
+			isa = PBXGroup;
+			children = (
+				9098ECAE2CB503A300F6B3FC /* Supporting Files */,
+				9098ECA52CB4E06000F6B3FC /* Models */,
+				9098ECA22CB4DFCA00F6B3FC /* Views */,
+				9098EC792CB4DF5C00F6B3FC /* Preview Content */,
+			);
+			path = ChuckNorrisJokes_Mike;
+			sourceTree = "<group>";
+		};
+		9098EC792CB4DF5C00F6B3FC /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				9098EC7A2CB4DF5C00F6B3FC /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		9098EC882CB4DF5C00F6B3FC /* ChuckNorrisJokes_MikeTests */ = {
+			isa = PBXGroup;
+			children = (
+				9098EC892CB4DF5C00F6B3FC /* ChuckNorrisJokes_MikeTests.swift */,
+			);
+			path = ChuckNorrisJokes_MikeTests;
+			sourceTree = "<group>";
+		};
+		9098EC922CB4DF5C00F6B3FC /* ChuckNorrisJokes_MikeUITests */ = {
+			isa = PBXGroup;
+			children = (
+				9098EC932CB4DF5C00F6B3FC /* ChuckNorrisJokes_MikeUITests.swift */,
+				9098EC952CB4DF5C00F6B3FC /* ChuckNorrisJokes_MikeUITestsLaunchTests.swift */,
+			);
+			path = ChuckNorrisJokes_MikeUITests;
+			sourceTree = "<group>";
+		};
+		9098ECA22CB4DFCA00F6B3FC /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				9098ECA32CB4E04C00F6B3FC /* JokeView.swift */,
+				9098ECA62CB4E1DA00F6B3FC /* LargeInlineButton.swift */,
+				9098ECA82CB4E8D200F6B3FC /* JokeCardView.swift */,
+				9098ECB12CB50C6C00F6B3FC /* HUDView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		9098ECA52CB4E06000F6B3FC /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				9098EC7E2CB4DF5C00F6B3FC /* ChuckNorrisJokes_Mike.xcdatamodeld */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		9098ECAA2CB4E9BB00F6B3FC /* ChuckNorrisJokesModel */ = {
+			isa = PBXGroup;
+			children = (
+				9098ECAB2CB4EA4500F6B3FC /* Models */,
+			);
+			path = ChuckNorrisJokesModel;
+			sourceTree = "<group>";
+		};
+		9098ECAB2CB4EA4500F6B3FC /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				9098ECAC2CB500BD00F6B3FC /* Joke.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		9098ECAE2CB503A300F6B3FC /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				9098ECB32CB50CE300F6B3FC /* ChuckNorrisJokesStyleKit.swift */,
+				9098EC732CB4DF5B00F6B3FC /* ChuckNorrisJokes_MikeApp.swift */,
+				9098EC772CB4DF5C00F6B3FC /* Assets.xcassets */,
+				9098ECAF2CB503BE00F6B3FC /* SampleJoke.json */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9098EC6F2CB4DF5B00F6B3FC /* ChuckNorrisJokes_Mike */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9098EC992CB4DF5C00F6B3FC /* Build configuration list for PBXNativeTarget "ChuckNorrisJokes_Mike" */;
+			buildPhases = (
+				9098EC6C2CB4DF5B00F6B3FC /* Sources */,
+				9098EC6D2CB4DF5B00F6B3FC /* Frameworks */,
+				9098EC6E2CB4DF5B00F6B3FC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ChuckNorrisJokes_Mike;
+			productName = ChuckNorrisJokes_Mike;
+			productReference = 9098EC702CB4DF5B00F6B3FC /* ChuckNorrisJokes_Mike.app */;
+			productType = "com.apple.product-type.application";
+		};
+		9098EC842CB4DF5C00F6B3FC /* ChuckNorrisJokes_MikeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9098EC9C2CB4DF5C00F6B3FC /* Build configuration list for PBXNativeTarget "ChuckNorrisJokes_MikeTests" */;
+			buildPhases = (
+				9098EC812CB4DF5C00F6B3FC /* Sources */,
+				9098EC822CB4DF5C00F6B3FC /* Frameworks */,
+				9098EC832CB4DF5C00F6B3FC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9098EC872CB4DF5C00F6B3FC /* PBXTargetDependency */,
+			);
+			name = ChuckNorrisJokes_MikeTests;
+			productName = ChuckNorrisJokes_MikeTests;
+			productReference = 9098EC852CB4DF5C00F6B3FC /* ChuckNorrisJokes_MikeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		9098EC8E2CB4DF5C00F6B3FC /* ChuckNorrisJokes_MikeUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9098EC9F2CB4DF5C00F6B3FC /* Build configuration list for PBXNativeTarget "ChuckNorrisJokes_MikeUITests" */;
+			buildPhases = (
+				9098EC8B2CB4DF5C00F6B3FC /* Sources */,
+				9098EC8C2CB4DF5C00F6B3FC /* Frameworks */,
+				9098EC8D2CB4DF5C00F6B3FC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9098EC912CB4DF5C00F6B3FC /* PBXTargetDependency */,
+			);
+			name = ChuckNorrisJokes_MikeUITests;
+			productName = ChuckNorrisJokes_MikeUITests;
+			productReference = 9098EC8F2CB4DF5C00F6B3FC /* ChuckNorrisJokes_MikeUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9098EC682CB4DF5B00F6B3FC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1540;
+				LastUpgradeCheck = 1540;
+				TargetAttributes = {
+					9098EC6F2CB4DF5B00F6B3FC = {
+						CreatedOnToolsVersion = 15.4;
+					};
+					9098EC842CB4DF5C00F6B3FC = {
+						CreatedOnToolsVersion = 15.4;
+						TestTargetID = 9098EC6F2CB4DF5B00F6B3FC;
+					};
+					9098EC8E2CB4DF5C00F6B3FC = {
+						CreatedOnToolsVersion = 15.4;
+						TestTargetID = 9098EC6F2CB4DF5B00F6B3FC;
+					};
+				};
+			};
+			buildConfigurationList = 9098EC6B2CB4DF5B00F6B3FC /* Build configuration list for PBXProject "ChuckNorrisJokes_Mike" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 9098EC672CB4DF5B00F6B3FC;
+			productRefGroup = 9098EC712CB4DF5B00F6B3FC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9098EC6F2CB4DF5B00F6B3FC /* ChuckNorrisJokes_Mike */,
+				9098EC842CB4DF5C00F6B3FC /* ChuckNorrisJokes_MikeTests */,
+				9098EC8E2CB4DF5C00F6B3FC /* ChuckNorrisJokes_MikeUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9098EC6E2CB4DF5B00F6B3FC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9098ECB02CB503BE00F6B3FC /* SampleJoke.json in Resources */,
+				9098EC7B2CB4DF5C00F6B3FC /* Preview Assets.xcassets in Resources */,
+				9098EC782CB4DF5C00F6B3FC /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9098EC832CB4DF5C00F6B3FC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9098EC8D2CB4DF5C00F6B3FC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9098EC6C2CB4DF5B00F6B3FC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9098ECB22CB50C6C00F6B3FC /* HUDView.swift in Sources */,
+				9098ECB42CB50CE300F6B3FC /* ChuckNorrisJokesStyleKit.swift in Sources */,
+				9098ECA72CB4E1DA00F6B3FC /* LargeInlineButton.swift in Sources */,
+				9098ECA92CB4E8D200F6B3FC /* JokeCardView.swift in Sources */,
+				9098ECAD2CB500BD00F6B3FC /* Joke.swift in Sources */,
+				9098ECA42CB4E04C00F6B3FC /* JokeView.swift in Sources */,
+				9098EC802CB4DF5C00F6B3FC /* ChuckNorrisJokes_Mike.xcdatamodeld in Sources */,
+				9098EC742CB4DF5B00F6B3FC /* ChuckNorrisJokes_MikeApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9098EC812CB4DF5C00F6B3FC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9098EC8A2CB4DF5C00F6B3FC /* ChuckNorrisJokes_MikeTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9098EC8B2CB4DF5C00F6B3FC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9098EC942CB4DF5C00F6B3FC /* ChuckNorrisJokes_MikeUITests.swift in Sources */,
+				9098EC962CB4DF5C00F6B3FC /* ChuckNorrisJokes_MikeUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		9098EC872CB4DF5C00F6B3FC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9098EC6F2CB4DF5B00F6B3FC /* ChuckNorrisJokes_Mike */;
+			targetProxy = 9098EC862CB4DF5C00F6B3FC /* PBXContainerItemProxy */;
+		};
+		9098EC912CB4DF5C00F6B3FC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9098EC6F2CB4DF5B00F6B3FC /* ChuckNorrisJokes_Mike */;
+			targetProxy = 9098EC902CB4DF5C00F6B3FC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		9098EC972CB4DF5C00F6B3FC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		9098EC982CB4DF5C00F6B3FC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9098EC9A2CB4DF5C00F6B3FC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"ChuckNorrisJokes_Mike/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.cxm.timeout.ChuckNorrisJokes-Mike";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		9098EC9B2CB4DF5C00F6B3FC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"ChuckNorrisJokes_Mike/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.cxm.timeout.ChuckNorrisJokes-Mike";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		9098EC9D2CB4DF5C00F6B3FC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.cxm.timeout.ChuckNorrisJokes-MikeTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ChuckNorrisJokes_Mike.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/ChuckNorrisJokes_Mike";
+			};
+			name = Debug;
+		};
+		9098EC9E2CB4DF5C00F6B3FC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.cxm.timeout.ChuckNorrisJokes-MikeTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ChuckNorrisJokes_Mike.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/ChuckNorrisJokes_Mike";
+			};
+			name = Release;
+		};
+		9098ECA02CB4DF5C00F6B3FC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.cxm.timeout.ChuckNorrisJokes-MikeUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ChuckNorrisJokes_Mike;
+			};
+			name = Debug;
+		};
+		9098ECA12CB4DF5C00F6B3FC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.cxm.timeout.ChuckNorrisJokes-MikeUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ChuckNorrisJokes_Mike;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9098EC6B2CB4DF5B00F6B3FC /* Build configuration list for PBXProject "ChuckNorrisJokes_Mike" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9098EC972CB4DF5C00F6B3FC /* Debug */,
+				9098EC982CB4DF5C00F6B3FC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9098EC992CB4DF5C00F6B3FC /* Build configuration list for PBXNativeTarget "ChuckNorrisJokes_Mike" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9098EC9A2CB4DF5C00F6B3FC /* Debug */,
+				9098EC9B2CB4DF5C00F6B3FC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9098EC9C2CB4DF5C00F6B3FC /* Build configuration list for PBXNativeTarget "ChuckNorrisJokes_MikeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9098EC9D2CB4DF5C00F6B3FC /* Debug */,
+				9098EC9E2CB4DF5C00F6B3FC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9098EC9F2CB4DF5C00F6B3FC /* Build configuration list for PBXNativeTarget "ChuckNorrisJokes_MikeUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9098ECA02CB4DF5C00F6B3FC /* Debug */,
+				9098ECA12CB4DF5C00F6B3FC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		9098EC7E2CB4DF5C00F6B3FC /* ChuckNorrisJokes_Mike.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				9098EC7F2CB4DF5C00F6B3FC /* ChuckNorrisJokes_Mike.xcdatamodel */,
+			);
+			currentVersion = 9098EC7F2CB4DF5C00F6B3FC /* ChuckNorrisJokes_Mike.xcdatamodel */;
+			path = ChuckNorrisJokes_Mike.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 9098EC682CB4DF5B00F6B3FC /* Project object */;
+}
